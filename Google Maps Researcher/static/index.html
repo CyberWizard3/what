@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Watershed Analyzer — Google-only</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <h1>Watershed Analyzer</h1>
+
+    <section>
+      <label>BBox (WGS84)</label>
+      <div class="row">
+        <input id="lon_min" value="107.55">
+        <input id="lat_min" value="51.80">
+        <input id="lon_max" value="107.70">
+        <input id="lat_max" value="51.86">
+      </div>
+    </section>
+
+    <section>
+      <label>Zoom (13–18)</label>
+      <input id="zoom" value="15" type="number" min="13" max="18">
+    </section>
+
+    <section>
+      <label>
+        <input id="include_roads" type="checkbox">
+        Включить слой дорог (+~6 c)
+      </label>
+    </section>
+
+    <button id="go">Анализ</button>
+    <div id="status">Готов.</div>
+
+    <section>
+      <label>Слои анализа</label>
+      <div id="layers"></div>
+    </section>
+  </aside>
+
+  <main>
+    <div id="map"></div>
+    <pre id="report"></pre>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

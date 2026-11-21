@@ -1,0 +1,20 @@
+.
+├── requirements.txt
+├── config.py
+├── app/
+│   ├── __init__.py
+│   ├── mercator.py
+│   ├── tiles.py
+│   ├── indices_rgb.py
+│   ├── classifier.py
+│   ├── terrain.py
+│   ├── analysis.py
+│   └── main.py
+├── static/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+├── .vscode/
+│   ├── settings.json
+│   └── launch.json
+└── .gitignore
